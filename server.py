@@ -58,7 +58,7 @@ def get_quote_from_author(author_name):
 
     except requests.exceptions.JSONDecodeError:
         result = {'title': " ", 'description': "Bad response from API.\n"}
-    print(result) #  -- for checking the0 response that was receicved
+    # print(result)   -- for checking the0 response that was receicved
     if result['count'] == 0:
          quote = f" No quotes  from {author_name} were found \n"
     else:
