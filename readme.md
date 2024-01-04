@@ -21,7 +21,7 @@ This project is an example of simple client-sever communication. The client send
 > >       - `message`- user input
 >  * `get_quote_from_author(author_name) ` - Returns quote from given author. Makes request to API(Quotable.io) 
 > > `author_name` - correct written name of author
----
+<br>
 
 ## Examples
 
@@ -47,6 +47,3 @@ Famous quoute: Blessed are the hearts that can bend; they shall never be broken.
  No quotes  from Diego Maradona were found 
 </code></pre>
 
-
-
----
