@@ -6,7 +6,7 @@
 This project is an example of simple client-sever communication. The client send to server name of historical figure. The server gets and information from two APIs and return respond to client.
 
 ## Architecture
- 1.  `client.py` - send connects with surver via socket. Asks user for input. Send message to server and then recives the answer.
+ 1.  `client.py` - send connects with surver via socket. Asks user for input. Send message to server and then receive the answer.
 > #### Functions
 > - `new_client()`- Sends requests to the server and then waits for an answer.
         
@@ -14,13 +14,13 @@ This project is an example of simple client-sever communication. The client send
 > #### Functions
 >  * `new_connection(connection, address)` - perform communication with a certain client, generates responses.
 > > -  receives parameters:
-> >     -  `connection` new socket object usable to send and receive data on the connection
+> >     -  `connection`  new socket object usable to send and receive data on the connection
 > >     -   `address` is the address bound to the socket on the other end of the connection.
 >  * `get_info_about_author(message) ` - Collects full name and description about person from API(Wikipeida) and returned them.
 > > -  receives parameters:
-> >       - `message`- user input
+> >       - `message` is user input
 >  * `get_quote_from_author(author_name) ` - Returns quote from given author. Makes request to API(Quotable.io) 
-> > `author_name` - correct written name of author
+> > `author_name` is correct written name of author
 <br>
 
 ## Examples
