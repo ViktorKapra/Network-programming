@@ -43,11 +43,14 @@ def get_info_about_author(message):
     except requests.exceptions.JSONDecodeError:
         result = {'title': " ", 'description': "Bad response from API.\n"}
     # print(result)  -- for checking the0 response that was receicved
+
     if len(result['pages']) == 0:
          msg = f" No information about {message} \n"
+         author_name = "No information"
     else:
          msg = f"{result['pages'][0]['title']} \n {result['pages'][0]['description'].rstrip()}.\n"
-    return [result['pages'][0]['title'] , msg]
+         author_name = result['pages'][0]['title']
+    return [ author_name, msg]
 
 def get_quote_from_author(author_name):
     try:
@@ -75,6 +78,7 @@ def start_server():
 
     while True:
         connection, address = server.accept()
+        print(f"{connection} \n {address}")
         thread = threading.Thread(target=new_connection, args=(connection, address))
         thread.start()
         print(f"Active connections: {threading.active_count() - 1}")
